@@ -1,20 +1,20 @@
-languageCode = "en"
-languageName = "English"
+languageCode = "zh-cn"
+languageName = "Simplified Chinese"
 weight = 1
-title = "四海"
+title = "王春盛"
 
 [params]
-  displayName = "EN"
-  isoCode = "en"
+  displayName = "ZH-CN"
+  isoCode = "zh-cn"
   rtl = false
   dateFormat = "2006-01-02"
   logo = "img/logo.png"
   # secondaryLogo = "img/secondary-logo.png"
-  description = "四海的独立博客"
-  copyright = "© 2023 四海"
+  description = "王春盛的独立博客"
+  copyright = "© 2023 王春盛"
 
 [author]
-  name = "四海"
+  name = "王春盛"
   image = "img/avatar.jpg"
   headline = "我是一个后端开发工程师"
   bio = "正在路上的后端工程师"
