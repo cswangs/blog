@@ -168,7 +168,6 @@ ps: 在发布之前可以执行 `hugo server` 命令在本地进行验证
 
 参考文档 **https://blowfish.page/docs/firebase-views/**
 
-
 1. Create a web app
 
    ![1708518623672](image/index/1708518623672.png)
@@ -200,11 +199,9 @@ service cloud.firestore {
 
 ![1708518119210](image/index/1708518119210.png)
 
-
-
 ## 6. Reference
 
-[如何用 GitHub Pages + Hugo 搭建个人博客](https://cuttontail.blog/blog/create-a-wesite-using-github-pages-and-hugo/)
+[如何用 GitHub Pages + Hugo 搭建个人博客](https://miawithcode.com/blog/how-to-build-a-personal-blog-using-github-pages-and-hugo)
 
 [blowfish 主题](https://blowfish.page/)
 
