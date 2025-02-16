@@ -323,11 +323,11 @@ set scrolloff=3
 ### git alias 配置推荐（展示更丰富的分支commit信息）
 
 ```bash
-git config --global alias.last=log -1 HEAD
-git config --global alias.logg=log --graph --decorate --oneline --simplify-by-decoration --all
-git config --global alias.cfgls=config --lis
-git config --global alias.lg=log --graph --decorate --oneline --all
-git config --global alias.caa=commit -a --amend
-git config --global alias.st=status
-git config --global alias.l=log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit  --decorate  --all
+git config --global alias.last 'log -1 HEAD'
+git config --global alias.logg 'log --graph --decorate --oneline --simplify-by-decoration --all'
+git config --global alias.cfgls 'config --lis'
+git config --global alias.lg 'log --graph --decorate --oneline --all'
+git config --global alias.caa 'commit -a --amend'
+git config --global alias.st 'status'
+git config --global alias.l "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit  --decorate  --all"
 ```
