@@ -22,6 +22,7 @@ slug: config-terminal
    ```shell
    zsh --version
    ```
+
 2. 安装 oh my zsh：
 
    ```shell
@@ -54,12 +55,13 @@ source ~/.zshrc
 p10k configure
 ```
 
+这里配置时注意，第一个选项是否安装字体可能会失败！！！可以先**选择不安装**
+
 ### 3.2 安装字体
 
 为了正确显示主题的特殊字符，需要安装 Nerd Font：
 
 ```bash
-brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
 ```
 
@@ -78,6 +80,12 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 ```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+### 4.3 autojump 安装
+
+```bash
+brew install auto jump
 ```
 
 ### 4.3 启用插件
@@ -115,13 +123,14 @@ source ~/.zshrc
 
 ### 5.2 配置配色方案
 
-1. 下载配色方案：
+1. 下载配色方案:
 
 ```bash
 git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git
 ```
 
-2. 导入配色方案：
+2. 导入配色方案:
+
    Preferences → Profiles → Colors → Color Presets → Import
 
    ![1738760722612](image/index/1738760722612.png)
@@ -241,6 +250,7 @@ source $ZSH/oh-my-zsh.sh
 1. 使用按需加载：将 nvm、conda 等环境配置改为手动加载
 2. 减少不必要的插件：只保留常用的 oh-my-zsh 插件
 3. 使用 `zprof` 分析启动性能：
+
    ```bash
    # 在 .zshrc 文件最开始添加
    zmodload zsh/zprof
@@ -259,3 +269,65 @@ source $ZSH/oh-my-zsh.sh
 1. 确保关闭了 Mouse Reporting 功能
 2. 使用 Command + C/V 进行复制粘贴
 3. 在 vim 中使用 visual 模式时，按住 Option 键进行选择复制
+
+## 10. 其他
+
+### vim 推荐配置
+
+修改 .vimrc 文件
+
+```bash
+" Configuration file for vim
+set modelines=0
+
+
+" Normally we use vim-extensions. If you want true vi-compatibility
+" remove change the following statements
+set nocompatible
+ " Use Vim defaults instead of 100% vi compatibility
+set backspace=2
+" more powerful backspacing
+
+
+" Don't write backup file if vim is being called by "crontab -e"
+au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
+" Don't write backup file if vim is being called by "chpass"
+au BufWrite /private/etc/pw.* set nowritebackup nobackup
+
+
+syntax on
+" 语法高亮
+autocmd InsertLeave * se nocul
+autocmd InsertEnter * se cul
+" 用浅色高亮当前行
+set tabstop=4
+" Tab键的宽度
+set softtabstop=4
+set shiftwidth=4
+"  统一缩进为4
+" 鼠标定位光标
+set mouse=a
+" set number
+" 显示行号
+colorscheme pablo
+" 设置颜色主题
+set ruler
+" 在编辑过程中，在右下角显示光标位置的状态行
+set scrolloff=3
+" 光标移动到buffer的顶部和底部时保持3行距离
+
+" Plugin 'ybian/smartim'
+
+```
+
+### git alias 配置推荐（展示更丰富的分支commit信息）
+
+```bash
+git config --global alias.last=log -1 HEAD
+git config --global alias.logg=log --graph --decorate --oneline --simplify-by-decoration --all
+git config --global alias.cfgls=config --lis
+git config --global alias.lg=log --graph --decorate --oneline --all
+git config --global alias.caa=commit -a --amend
+git config --global alias.st=status
+git config --global alias.l=log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit  --decorate  --all
+```
