@@ -210,3 +210,17 @@ service cloud.firestore {
 [cusdis 评论系统](https://cusdis.com/)
 
 [google 浏览量和点赞](https://console.firebase.google.com/)
+
+## 7. 其他
+
+1. 克隆项目注意项
+
+克隆blog项目时，需要将submodule也克隆，因为blowfish主题是git子模块
+
+```bash
+git clone --recurse-submodules <repository-url>
+```
+
+```bash
+git submodule update --remote
+```

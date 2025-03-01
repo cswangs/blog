@@ -11,12 +11,6 @@
   data-page-title="{{ .Title }}"
 ></div>
 
-{{- $js := resources.GetRemote "https://cusdis.com/js/widget/lang/zh-cn.js" | js.Build (dict "minify" true) -}}
-<script type='text/javascript'>
-  {{ $js.Content | safeJS }}
-</script>
-
-{{- $js := resources.GetRemote "https://cusdis.com/js/cusdis.es.js" | js.Build (dict "minify" true) -}}
-<script type='text/javascript'>
-  {{ $js.Content | safeJS }}
-</script>
+<!-- Load Cusdis scripts directly instead of using resources.GetRemote -->
+<script async defer src="https://cusdis.com/js/widget/lang/zh-cn.js"></script>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>

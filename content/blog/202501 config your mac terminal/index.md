@@ -85,7 +85,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 ### 4.3 autojump 安装
 
 ```bash
-brew install auto jump
+brew install autojump
 ```
 
 ### 4.3 启用插件
@@ -269,6 +269,21 @@ source $ZSH/oh-my-zsh.sh
 1. 确保关闭了 Mouse Reporting 功能
 2. 使用 Command + C/V 进行复制粘贴
 3. 在 vim 中使用 visual 模式时，按住 Option 键进行选择复制
+
+### 9.4 终端左侧有小三角
+
+![alt text](image/index/image.png)
+![alt text](image/index/Session.png)
+
+1. 取消勾选 `show mark indicators`
+
+### 9.5 iterm2 HotKey window 无法再任意界面弹出展示
+
+iterm2 热键无法再任意界面展示，比如在全屏chrome时，按快捷键会跳出chrome
+
+1. `HotKey Window` -> `Advanced` -> `Configure HotKey Window` -> `Floating Window`
+2. 勾选floating window
+![alt text](image/index/v2-a1ca587f02d6c1828bc19d87279c865e_1440w.webp)
 
 ## 10. 其他
 

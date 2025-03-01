@@ -16,8 +16,9 @@ title = "王春盛"
 [author]
   name = "王春盛"
   image = "img/avatar.jpg"
-  headline = "我是一个软件开发工程师"
-  bio = "正在路上的软件工程师"
+  headline = "peace & love"
+  bio = "life is short, make it sweet"
+  
   links = [
     { github = "https://github.com/cswangs" },
     { twitter = "https://twitter.com/chriswangss" },
